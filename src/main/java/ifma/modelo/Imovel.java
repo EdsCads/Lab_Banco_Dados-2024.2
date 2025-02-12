@@ -16,7 +16,7 @@ import lombok.Setter;
 public class Imovel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer d;
+    private Integer id;
     @Column(nullable = false)
     private String logradouro;
     @Column(nullable = false)
@@ -25,9 +25,9 @@ public class Imovel {
     private String cep;
 
     private Integer metragem;
-    private Boolean dormitorios;
-    private Boolean suites;
-    private Boolean vagsGaragem;
+    private Boolean temDormitorios;
+    private Boolean temSuites;
+    private Boolean temVagasGaragem;
     private Float valorAluguelSugerido;
 
     @Column (columnDefinition = "TEXT")
@@ -38,7 +38,7 @@ public class Imovel {
     private TipoImovel tipoImovel;
 
     @ManyToOne
-    @JoinColumn(name = "fk_id_Cliente")
+    @JoinColumn(name = "fk_id_Cliente", nullable = false)
     private Cliente proprietario;
 
 }
