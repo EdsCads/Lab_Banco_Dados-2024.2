@@ -15,7 +15,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Locacao {
+public class Locacao implements EntidadeBase{
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY )

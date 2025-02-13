@@ -13,7 +13,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Cliente {
+public class Cliente implements EntidadeBase{
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

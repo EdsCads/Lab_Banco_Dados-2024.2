@@ -13,7 +13,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Imovel {
+public class Imovel implements EntidadeBase{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;

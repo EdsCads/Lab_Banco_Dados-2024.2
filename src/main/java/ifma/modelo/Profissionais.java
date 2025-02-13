@@ -11,7 +11,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Profissionais {
+public class Profissionais implements EntidadeBase{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
