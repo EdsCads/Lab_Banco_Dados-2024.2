@@ -1,6 +1,6 @@
-C:\Users\Eu\Documents\PROGRAMCAO\JAVA\Lab_Banco_Dados-2024.2\src\main\java\ifma\App.java
 C:\Users\Eu\Documents\PROGRAMCAO\JAVA\Lab_Banco_Dados-2024.2\src\main\java\ifma\modelo\Aluguel.java
 C:\Users\Eu\Documents\PROGRAMCAO\JAVA\Lab_Banco_Dados-2024.2\src\main\java\ifma\modelo\Cliente.java
+C:\Users\Eu\Documents\PROGRAMCAO\JAVA\Lab_Banco_Dados-2024.2\src\main\java\ifma\modelo\EntidadeBase.java
 C:\Users\Eu\Documents\PROGRAMCAO\JAVA\Lab_Banco_Dados-2024.2\src\main\java\ifma\modelo\Imovel.java
 C:\Users\Eu\Documents\PROGRAMCAO\JAVA\Lab_Banco_Dados-2024.2\src\main\java\ifma\modelo\Locacao.java
 C:\Users\Eu\Documents\PROGRAMCAO\JAVA\Lab_Banco_Dados-2024.2\src\main\java\ifma\modelo\Profissionais.java
@@ -8,4 +8,5 @@ C:\Users\Eu\Documents\PROGRAMCAO\JAVA\Lab_Banco_Dados-2024.2\src\main\java\ifma\
 C:\Users\Eu\Documents\PROGRAMCAO\JAVA\Lab_Banco_Dados-2024.2\src\main\java\ifma\modelo\TipoImovel.java
 C:\Users\Eu\Documents\PROGRAMCAO\JAVA\Lab_Banco_Dados-2024.2\src\main\java\ifma\repositorio\DAOGenerico.java
 C:\Users\Eu\Documents\PROGRAMCAO\JAVA\Lab_Banco_Dados-2024.2\src\main\java\ifma\repositorio\ImovelRepositorio.java
+C:\Users\Eu\Documents\PROGRAMCAO\JAVA\Lab_Banco_Dados-2024.2\src\main\java\ifma\test\TestImovel.java
 C:\Users\Eu\Documents\PROGRAMCAO\JAVA\Lab_Banco_Dados-2024.2\src\main\java\ifma\util\EMFactory.java

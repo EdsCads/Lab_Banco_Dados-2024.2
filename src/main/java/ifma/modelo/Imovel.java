@@ -41,4 +41,8 @@ public class Imovel implements EntidadeBase{
     @JoinColumn(name = "fk_id_Cliente", nullable = false)
     private Cliente proprietario;
 
+    public Integer getId() {
+        return id;
+    }
+
 }

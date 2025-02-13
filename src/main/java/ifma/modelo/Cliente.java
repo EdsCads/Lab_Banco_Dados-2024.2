@@ -27,4 +27,8 @@ public class Cliente implements EntidadeBase{
 	private String email;
 	private LocalDate dt_Nascimento;
 
+    public Integer getId() {
+        return id;
+    }
+
 }

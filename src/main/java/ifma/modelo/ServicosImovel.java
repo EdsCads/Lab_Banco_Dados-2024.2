@@ -35,4 +35,8 @@ public class ServicosImovel{
     @JoinColumn(name = "fk_id_imovel")
     private Imovel imovel;
 
+    public Integer getId() {
+        return id;
+    }
+
 }

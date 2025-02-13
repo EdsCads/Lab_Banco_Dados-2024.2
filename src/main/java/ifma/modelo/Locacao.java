@@ -43,4 +43,8 @@ public class Locacao implements EntidadeBase{
     @ManyToOne
     @JoinColumn(name = "fk_id_Cliente", nullable = false)
     private Cliente inquilino;
+
+    public Integer getId() {
+        return id;
+    }
 }

@@ -29,4 +29,8 @@ public class Profissionais implements EntidadeBase{
     @Column (columnDefinition = "TEXT")
     private String obs;
 
+    public Integer getId() {
+        return id;
+    }
+
 }
