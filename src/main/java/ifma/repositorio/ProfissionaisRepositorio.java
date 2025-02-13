@@ -21,6 +21,10 @@ public class ProfissionaisRepositorio {
                 .getResultList();
     }
 
+    public Profissionais buscaPorId(Integer id) {
+        return daoGenerico.buscaPorId(Profissionais.class, id);
+
+    }
 
     public Profissionais salvaOuAtualiza(Profissionais profissionais) {
         return daoGenerico.salvaOuAtualiza(profissionais);
