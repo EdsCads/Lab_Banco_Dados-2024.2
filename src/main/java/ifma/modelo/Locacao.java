@@ -15,7 +15,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Locacao {
+public class Locacao implements EntidadeBase{
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY )
@@ -41,6 +41,10 @@ public class Locacao {
     private Imovel imovel;
 
     @ManyToOne
-    @JoinColumn(name = "fk_id_imovel", nullable = false)
+    @JoinColumn(name = "fk_id_Cliente", nullable = false)
     private Cliente inquilino;
+
+    public Integer getId() {
+        return id;
+    }
 }
