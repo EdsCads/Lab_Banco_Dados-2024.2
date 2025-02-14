@@ -21,6 +21,10 @@ public class ImovelRepositorio {
                 .getResultList();
     }
 
+    public Imovel buscaPorId(Integer id) {
+        return daoGenerico.buscaPorId(Imovel.class, id);
+
+    }
 
     public Imovel salvaOuAtualiza(Imovel imovel) {
         return daoGenerico.salvaOuAtualiza(imovel);

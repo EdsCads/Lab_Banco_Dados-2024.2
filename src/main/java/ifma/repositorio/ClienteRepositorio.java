@@ -21,6 +21,10 @@ public class ClienteRepositorio {
                 .getResultList();
     }
 
+    public Cliente buscaPorId(Integer id) {
+        return daoGenerico.buscaPorId(Cliente.class, id);
+
+    }
 
     public Cliente salvaOuAtualiza(Cliente cliente) {
         return daoGenerico.salvaOuAtualiza(cliente);

@@ -15,7 +15,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class ServicosImovel{
+public class ServicosImovel implements EntidadeBase{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
