@@ -9,8 +9,10 @@ Você foi contratado por uma imobiliária para desenvolver um backend de uma apl
 
 ## PARTE 1: 
 
-Defina as classes do modelo com os mapeamentos JPA para o seguinte diagrama relacional. (4 pt)
-![Modelo Relacional] (./images/modelo.jpeg)
+Defina as classes do modelo com os mapeamentos JPA para o seguinte diagrama relacional. (4 pt)<br>
+
+![Modelo Relacional](./imagesPDF/modelo.jpg)
+
 Nomenclatura: Losango preenchido - campo not null
 Deverão ser criadas as classes do modelo que representam as entidades do banco juntamente com os seus relacionamentos e os mapeamentos JPA de acordo com o esquema relacional apresentado anteriormente. 
 Utilize boas práticas de programação orientada a objetos, como encapsulamento de regras de negócio, coesão e baixo acoplamento.<br>
