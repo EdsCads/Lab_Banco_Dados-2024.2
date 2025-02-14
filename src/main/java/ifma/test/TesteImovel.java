@@ -33,17 +33,7 @@ public class TesteImovel {
             clienteRepo.salvaOuAtualiza(proprietario1);
             clienteRepo.salvaOuAtualiza(proprietario2);
 
-            // Criando e persistindo tipos de imóveis
-            TipoImovel tipoApartamento = new TipoImovel();
-            tipoApartamento.setDescricao("Apartamento");
-            TipoImovel tipoCasa = new TipoImovel();
-            tipoCasa.setDescricao("Casa");
-            
-            em.persist(tipoApartamento);
-            em.persist(tipoCasa);
-
             // Criando e persistindo imóveis
-
             Imovel imovel1 = new Imovel();
             imovel1.setLogradouro("Rua das Margaridas");
             imovel1.setBairro("Florizal");
@@ -54,7 +44,7 @@ public class TesteImovel {
             imovel1.setTemVagasGaragem(true);
             imovel1.setValorAluguelSugerido(3560.0f);
             imovel1.setObs("Em frente ao Jardims");
-            imovel1.setTipoImovel(tipoApartamento);
+            imovel1.setTipoImovel(TipoImovel.APARTAMENTO);
             imovel1.setProprietario(clienteRepo.buscaPorId(1));
             
             Imovel imovel2 = new Imovel();
@@ -67,7 +57,7 @@ public class TesteImovel {
             imovel2.setTemVagasGaragem(true);
             imovel2.setValorAluguelSugerido(2500.0f);
             imovel2.setObs("Casa com quintal");
-            imovel2.setTipoImovel(tipoCasa);
+            imovel2.setTipoImovel(TipoImovel.CASA);
             imovel2.setProprietario(proprietario2);
                 
             // Salvando imóveis usando o repositório
@@ -80,15 +70,6 @@ public class TesteImovel {
             // Testando listagem de imóveis
             System.out.println("\nListando todos os imóveis:");
 
-            for(Imovel imovel : repositorio.todosImoveis()){
-                System.out.println("----------------------------------------");
-                System.out.println("Endereço: " + imovel.getLogradouro() + ", " + imovel.getBairro());
-                System.out.println("CEP: " + imovel.getCep());
-                System.out.println("Tipo: " + imovel.getTipoImovel().getDescricao());
-                System.out.println("Proprietário: " + imovel.getProprietario().getNome());
-                System.out.println("Valor Sugerido: R$ " + imovel.getValorAluguelSugerido());
-                System.out.println("----------------------------------------");
-            }
 
             // Testando remoção
             System.out.println("\nRemovendo um imóvel...");
@@ -97,16 +78,7 @@ public class TesteImovel {
             em.getTransaction().commit();
 
             // Verificando a remoção
-            System.out.println("\nListando imóveis após remoção:");
-            for(Imovel imovel : repositorio.todosImoveis()){
-                System.out.println("----------------------------------------");
-                System.out.println("Endereço: " + imovel.getLogradouro() + ", " + imovel.getBairro());
-                System.out.println("CEP: " + imovel.getCep());
-                System.out.println("Tipo: " + imovel.getTipoImovel().getDescricao());
-                System.out.println("Proprietário: " + imovel.getProprietario().getNome());
-                System.out.println("Valor Sugerido: R$ " + imovel.getValorAluguelSugerido());
-                System.out.println("----------------------------------------");
-            }
+            
             
         } catch (Exception e) {
             if (em.getTransaction().isActive()) {

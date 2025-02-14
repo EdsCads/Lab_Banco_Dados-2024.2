@@ -2,8 +2,6 @@ package ifma.test;
 
 import java.time.LocalDate;
 
-import org.hibernate.service.internal.ServiceProxyGenerationException;
-
 import ifma.modelo.Profissionais;
 import ifma.modelo.ServicosImovel;
 import ifma.repositorio.ImovelRepositorio;
@@ -37,8 +35,8 @@ public class TesteServicoImovel {
             profissional2.setObs("Educado, ja vendeu 3 terrenos");
             profissional2.setTelefone1("321654987");
 
-            em.persist(profissional1);
-            em.persist(profissional2);
+            profisisonalRepo.salvaOuAtualiza(profissional2);
+            profisisonalRepo.salvaOuAtualiza(profissional1);
 
             //Criando Servico de Imovel
 
@@ -48,19 +46,13 @@ public class TesteServicoImovel {
             servico1.setProfissionais(profissional2);
             servico1.setValorTotal(340.90f);
 
+            servicoRepo.salvaOuAtualiza(servico1);
             // Commitando transação
             em.getTransaction().commit();
-
-            // Testando listagem de imóveis
-            System.out.println("\nListando todos os Serviços:");
-
-ServicosImovel servicoEscolhido = servicoRepo.buscaPorId(1);
-
-            System.out.println("Data do Servico: "+servicoEscolhido.getDataServico()+"\nProfissional Encarregado: "+servicoEscolhido.getProfissionais()+"\nPropriedade: "+servicoEscolhido.getImovel().getObs());
-
+            
             // Testando remoção
-            System.out.println("\nRemovendo um Profissional...");
 
+            em.getTransaction().begin();
             profisisonalRepo.remover(profissional2);
 
             em.getTransaction().commit();

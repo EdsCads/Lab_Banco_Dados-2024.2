@@ -1,21 +1,20 @@
 package ifma.modelo;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import lombok.Getter;
-import lombok.Setter;
+public enum TipoImovel {
+    CASA("Casa"),
+    APARTAMENTO("Apartamento"),
+    KITNET("Kitnet"),
+    SALA_COMERCIAL("Sala Comercial"),
+    LOJA("Loja"),
+    TERRENO("Terreno");
 
+    private String descricao;
 
-@Entity
-@Getter
-@Setter
-public class TipoImovel{
-	@Id
-	@GeneratedValue (strategy = GenerationType.IDENTITY) 
-	private Integer id;
-	@Column(nullable= false)
-	private String descricao;
-}
+    TipoImovel(String descricao) {
+        this.descricao = descricao;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+} 

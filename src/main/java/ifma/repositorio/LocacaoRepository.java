@@ -34,4 +34,12 @@ public class LocacaoRepository {
         daoGenerico.remove(locacao );
     }
 
+    public List<Locacao> buscarLocacoesAtivasPorImovel(Integer imovelId) {
+        return manager.createQuery(
+            "SELECT l FROM Locacao l WHERE l.imovel.id = :imovelId AND l.ativo = true", 
+            Locacao.class)
+            .setParameter("imovelId", imovelId)
+            .getResultList();
+    }
+
 }
